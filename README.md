@@ -1,14 +1,14 @@
-# RNA-velocity on BD-Rhapsody data
+# Velocyto.py for BD Rhapsody
 
-Usually, BD data is processed using a proprietary pipeline on the sevenbridges platform.
-To my knowlege, it currently does not support RNA-velocity analysis.
+This is a minimal [nextflow](https://www.nextflow.io/) workflow to run [velocyto.py](http://velocyto.org/) on BAM filese produces by the BD Rhapsody pipeline. 
+It consists of two steps
+ * manipulating the BAM file to make it compatible with velocyto. 
+ * running velocyto.py
 
-STARsolo, Kallito/bustools and Alevin all support RNA-velocity out-of-the box.
-The most promising report of having applied one of these tools to BD data is
-https://github.com/alexdobin/STAR/issues/1111.
+## Usage
 
-## Library preparation and barcodes
+```bash
+nextflow run veolcyto.py -c nf_velocyto.config
+```
 
-Are available from the Teichlab scg_lib_structs repo:
-https://teichlab.github.io/scg_lib_structs/methods_html/BD_Rhapsody.html
-
+The `nf_velocyto.config` defines all paths to input and reference files. Adjust it to your needs. 
