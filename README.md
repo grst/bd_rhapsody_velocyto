@@ -8,7 +8,7 @@ It consists of two steps
 ## Usage
 
 ```bash
-nextflow run veolcyto.py -c nf_velocyto.config
+nextflow run velocyto.nf -c nf_velocyto.config
 ```
 
 The `nf_velocyto.config` defines all paths to input and reference files. Adjust it to your needs. 
